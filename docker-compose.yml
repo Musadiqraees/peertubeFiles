@@ -10,8 +10,7 @@ services:
       - "80:80"     # The HTTP port
       - "443:443"   # The HTTPS port
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen t
-      - ./certs/:/certs/
+      - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen 
       - ./docker-volume/traefik/traefik.toml:/traefik.toml
     restart: "always"
     # If you want to use the Traefik dashboard, you should expose it on a
